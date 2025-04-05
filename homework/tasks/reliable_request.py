@@ -35,4 +35,4 @@ async def do_reliable_request(url: str, observer: ResultsObserver) -> None:
                 logging.error(f"HTTP error: {error}")
             except httpx.ReadTimeout as error:
                 logging.error(f"timeout: {error}")
-        attempts += 1
+            attempts += 1
