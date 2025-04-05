@@ -19,7 +19,7 @@ async def do_reliable_request(url: str, observer: ResultsObserver) -> None:
     Все успешно полученные результаты должны регистрироваться с помощью обсёрвера.
     """
     retries = 5
-    timeout = 5
+    timeout = 10
 
     async with httpx.AsyncClient() as client:
         attempts = 0
