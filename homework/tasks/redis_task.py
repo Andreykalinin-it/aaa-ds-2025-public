@@ -17,7 +17,7 @@ class UsersByTitleStorage:
         можно было за один запрос получить список уникальных пользователей,
         имеющих объявления с заданным заголовком.
         """
-        self._client.sadd(title, user_id)
+        await self._client.sadd(title, user_id)
 
     async def find_users_by_title(self, title: str) -> list[int]:
         """
